@@ -31,6 +31,13 @@ bison -d -t -o grammartranslator.cc grammartranslator.y
 if [ -f grammartranslator.hh ]
 then
   mv grammartranslator.hh grammartranslator.cc.h
+  #for the compatibility with grammar
+  echo "#ifndef YY_YY_GRAMMAR_HH_INCLUDED" > temp_grammar.txt
+  cat grammartranslator.cc.h >> temp_grammar.txt
+  echo "#endif /*!YY_YY_GRAMMAR_HH_INCLUDED*/" >> temp_grammar.txt
+  cat temp_grammar.txt > grammartranslator.cc.h
+  rm temp_grammar.txt
+  #end for
 fi
 if [ -f grammartranslator.h ]
 then

@@ -1,3 +1,4 @@
+#ifndef YY_YY_GRAMMAR_HH_INCLUDED
 /* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
@@ -150,3 +151,4 @@ extern int jldebug;
 int jlparse (void);
 
 #endif /* !YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED  */
+#endif /*!YY_YY_GRAMMAR_HH_INCLUDED*/
