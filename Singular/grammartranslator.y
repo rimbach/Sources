@@ -46,16 +46,11 @@
 #include "coeffs/bigintmat.h"
 
 #define JL_TRANSLATOR_GRAMMAR
-#define JL_TRANSLATOR_GRAMMAR_DEBUG
+// #define JL_TRANSLATOR_GRAMMAR_DEBUG
 
-// #ifdef JL_TRANSLATOR_GRAMMAR
-// #include "Singular/grammartranslator.h"
 #include "Singular/translator/mstring.h"
 #include "Singular/translator/toJulia.h"
 #include "Singular/translator/msymtable.h"
-// #else
-// #include "Singular/grammar.h"
-// #endif
 
 
 #if 0
