@@ -7,9 +7,15 @@
 * ABSTRACT: tokens, types for interpreter; general macros
 */
 
+#define JL_TRANSLATOR_TOK
+
 #ifndef UMINUS
 #include "kernel/mod2.h"
+#ifndef JL_TRANSLATOR_TOK
 #include "Singular/grammar.h"
+#else
+#include "Singular/grammartranslator.h"
+#endif
 #endif
 
 extern int      yylineno;

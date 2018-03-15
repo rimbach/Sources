@@ -18,7 +18,12 @@
 #include "Singular/ipshell.h"
 #include "Singular/sdb.h"
 
+#include <stdlib.h>
+#include <stdio.h>
 #include "misc/mylimits.h"
+#include <stdarg.h>
+#include <sys/stat.h>
+#include <ctype.h>
 #include <unistd.h>
 
 #ifdef HAVE_PWD_H
@@ -32,10 +37,14 @@
 char fe_promptstr[] ="  ";
 FILE *File_Profiling=NULL;
 
+// output/print buffer:
+#define INITIAL_PRINT_BUFFER 24*1024L
 // line buffer for reading:
 // minimal value for MAX_FILE_BUFFER: 4*4096 - see Tst/Long/gcd0_l.tst
 // this is an upper limit for the size of monomials/numbers read via the interpreter
 #define MAX_FILE_BUFFER 4*4096
+// static long feBufferLength=INITIAL_PRINT_BUFFER;
+//static char * feBuffer=(char *)omAlloc(INITIAL_PRINT_BUFFER);
 
 /**************************************************************************
 * handling of 'voices'
@@ -46,7 +55,7 @@ extern int blocknest; /* scaner.l internal */
 int    yy_noeof=0;     // the scanner "state"
 int    yy_blocklineno; // to get the lineno of the block start from scanner
 Voice  *currentVoice = NULL;
-// FILE   *feFilePending; /*temp. storage for grammar.y */
+//FILE   *feFilePending; /*temp. storage for grammar.y */
 
 //static const char * BT_name[]={"BT_none","BT_break","BT_proc","BT_example",
 //                               "BT_file","BT_execute","BT_if","BT_else"};
@@ -95,6 +104,9 @@ void Voice::Next()
     currentVoice->next=p;
   }
   p->prev=currentVoice;
+#ifdef JL_TRANSLATOR_FEVOICES
+  p->table_of_symbols = msymtable_init();
+#endif
   currentVoice=p;
   //PrintS("Next:");
 }
@@ -117,7 +129,7 @@ feBufferTypes Voice::Typ()
 * start the file 'fname' (STDIN is stdin) as a new voice (cf.VFile)
 * return FALSE on success, TRUE if an error occurs (file cannot be opened)
 */
-BOOLEAN newFile(char *fname)
+BOOLEAN newFile(char *fname,FILE* f)
 {
   currentVoice->Next();
   //Print(":File%d(%s):%s(%x)\n",
@@ -133,11 +145,16 @@ BOOLEAN newFile(char *fname)
   else
   {
     currentVoice->sw = BI_file; /* needed by exitVoice below */
-    currentVoice->files = feFopen(fname,"r",NULL,TRUE);
-    if (currentVoice->files==NULL)
+    if (f!=NULL)
+      currentVoice->files = f;
+    else
     {
-      exitVoice();
-      return TRUE;
+      currentVoice->files = feFopen(fname,"r",NULL,TRUE);
+      if (currentVoice->files==NULL)
+      {
+        exitVoice();
+        return TRUE;
+      }
     }
     currentVoice->start_lineno = 0;
   }
@@ -157,8 +174,8 @@ BOOLEAN newFile(char *fname)
 void newBuffer(char* s, feBufferTypes t, procinfo* pi, int lineno)
 {
   currentVoice->Next();
-  //Print(":Buffer%d(%s):%s(%x)\n",
-  //  t,BT_name[t],pname,currentVoice);
+//   Print(":Buffer%d(%s):%s(%x)\n",
+//    t,BT_name[t],pname,currentVoice);
   if (pi!=NULL)
   {
     long l=strlen(pi->procname);
@@ -218,6 +235,10 @@ void newBuffer(char* s, feBufferTypes t, procinfo* pi, int lineno)
   //}
   //while (p!=NULL);
   //PrintS("----------------\n");
+  
+#ifdef JL_TRANSLATOR_FEVOICES
+  currentVoice->waitingForEnd = 0;
+#endif
 }
 
 /*2
@@ -346,6 +367,12 @@ BOOLEAN exitVoice()
   //}
   if (currentVoice!=NULL)
   {
+#ifdef JL_TRANSLATOR_FEVOICES
+    if (currentVoice->table_of_symbols!=NULL) {
+        currentVoice->table_of_symbols = msymtable_free(currentVoice->table_of_symbols);
+        currentVoice->table_of_symbols=NULL;
+    }
+#endif
     if (currentVoice->oldb!=NULL)
     {
       myyoldbuffer(currentVoice->oldb);
@@ -523,32 +550,31 @@ int feReadLine(char* b, int l)
       b[i]='\0';
       if (currentVoice->sw==BI_buffer)
       {
-        BOOLEAN show_echo=FALSE;
-        char *anf;
-        long len;
         if (startfptr==0)
         {
-          anf=currentVoice->buffer;
+          char *anf=currentVoice->buffer;
           const char *ss=strchr(anf,'\n');
+          long len;
           if (ss==NULL) len=strlen(anf);
           else          len=ss-anf;
-          show_echo=TRUE;
+          char *s=(char *)omAlloc(len+2);
+          strncpy(s,anf,len+2);
+          s[len+1]='\0';
+          fePrintEcho(s,b);
+          omFree((ADDRESS)s);
         }
         else if (/*(startfptr>0) &&*/
         (currentVoice->buffer[startfptr-1]=='\n'))
         {
-          anf=currentVoice->buffer+startfptr;
+          char *anf=currentVoice->buffer+startfptr;
           const char *ss=strchr(anf,'\n');
+          long len;
           if (ss==NULL) len=strlen(anf);
           else          len=ss-anf;
-          yylineno++;
-          show_echo=TRUE;
-        }
-        if (show_echo)
-        {
           char *s=(char *)omAlloc(len+2);
           strncpy(s,anf,len+2);
           s[len+1]='\0';
+          yylineno++;
           fePrintEcho(s,b);
           omFree((ADDRESS)s);
         }
@@ -676,5 +702,10 @@ Voice * feInitStdin(Voice *pp)
   omMarkAsStaticAddr(p->filename);
   return p;
 }
+
+
+#else /* ! STANDALONE_PARSER */
+#include <stdio.h>
+
 #endif
 

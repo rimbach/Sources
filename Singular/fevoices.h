@@ -13,6 +13,11 @@
 
 #include "kernel/structs.h"
 
+#define JL_TRANSLATOR_FEVOICES
+#ifdef JL_TRANSLATOR_FEVOICES
+#include "Singular/translator/msymtable.h"
+#endif
+
 enum   feBufferTypes
 {
   BT_none  = 0,  // entry level
@@ -83,9 +88,23 @@ class Voice
             */
     feBufferTypes   typ;  // buffer type: see BT_..
 
+#ifdef JL_TRANSLATOR_FEVOICES
+    char   waitingForEnd;
+            /* 0 normal situation
+             * 1 if statement has just been processed:
+             *   waiting for either an else statement
+             *               or any other statement and "end" will be written
+             */
+    char   ring_decl;
+            /* 1 if a element of the current ring is in declaration */
+            /* 0 otherwise */
+    msymtable table_of_symbols; /* the symbols of the current scope */
+#endif
+
   Voice() { memset(this,0,sizeof(*this));}
   feBufferTypes Typ();
   void Next();
+   
 } ;
 
 extern Voice  *currentVoice;
@@ -98,7 +117,7 @@ BOOLEAN contBuffer(feBufferTypes typ);
 BOOLEAN exitBuffer(feBufferTypes typ);
 BOOLEAN exitVoice();
 void    monitor(void *F, int mode); /* FILE*, int */
-BOOLEAN newFile(char* fname);
+BOOLEAN newFile(char* fname, FILE *f=NULL);
 void    newBuffer(char* s, feBufferTypes t, procinfo *pname = NULL, int start_lineno = 0);
 void *  myynewbuffer();
 void    myyoldbuffer(void * oldb);

@@ -1,4 +1,3 @@
-#ifndef YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED
 /* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
@@ -31,20 +30,28 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-#ifndef YY_YY_GRAMMAR_HH_INCLUDED
-# define YY_YY_GRAMMAR_HH_INCLUDED
+#ifndef YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED
+# define YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED
 /* Debug traces.  */
-#ifndef YYDEBUG
-# define YYDEBUG 1
-#endif
+#ifndef JLDEBUG
+# if defined YYDEBUG
 #if YYDEBUG
-extern int yydebug;
+#   define JLDEBUG 1
+#  else
+#   define JLDEBUG 0
+#  endif
+# else /* ! defined YYDEBUG */
+#  define JLDEBUG 1
+# endif /* ! defined YYDEBUG */
+#endif  /* ! defined JLDEBUG */
+#if JLDEBUG
+extern int jldebug;
 #endif
 
 /* Token type.  */
-#ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-  enum yytokentype
+#ifndef JLTOKENTYPE
+# define JLTOKENTYPE
+  enum jltokentype
   {
     DOTDOT = 258,
     EQUAL_EQUAL = 259,
@@ -140,7 +147,6 @@ extern int yydebug;
 
 
 
-int yyparse (void);
+int jlparse (void);
 
-#endif /* !YY_YY_GRAMMAR_HH_INCLUDED  */
-#endif /*!YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED*/
+#endif /* !YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED  */

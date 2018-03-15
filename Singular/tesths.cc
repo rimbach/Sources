@@ -7,7 +7,7 @@
 */
 
 
-
+#include "Singular/grammartranslator.h"
 
 #include "kernel/mod2.h"
 #include "omalloc/omalloc.h"
@@ -38,7 +38,6 @@
 #ifdef HAVE_NTL
 #include <NTL/config.h>
 #endif
-
 
 extern int siInit(char *);
 
@@ -229,7 +228,8 @@ int main(          /* main entry to Singular */
     }
   }
   setjmp(si_start_jmpbuf);
-  yyparse();
+//   yyparse();
+  jlparse();
   m2_end(0);
   return 0;
 }

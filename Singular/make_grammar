@@ -3,6 +3,13 @@ bison -d -t -o grammar.cc grammar.y
 if [ -f grammar.hh ]
 then
   mv grammar.hh grammar.cc.h
+  #for the compatibility with grammartranslator
+  echo "#ifndef YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED" > temp_grammar.txt
+  cat grammar.cc.h >> temp_grammar.txt
+  echo "#endif /*!YY_JL_GRAMMARTRANSLATOR_HH_INCLUDED*/" >> temp_grammar.txt
+  cat temp_grammar.txt > grammar.cc.h
+  rm temp_grammar.txt
+  #end for
 fi
 if [ -f grammar.h ]
 then
@@ -19,3 +26,25 @@ else
   mv grammar.cc.h grammar.h
 fi
 
+
+bison -d -t -o grammartranslator.cc grammartranslator.y
+if [ -f grammartranslator.hh ]
+then
+  mv grammartranslator.hh grammartranslator.cc.h
+fi
+if [ -f grammartranslator.h ]
+then
+  if diff -w grammartranslator.cc.h grammartranslator.h >/dev/null
+  then
+    echo grammartranslator.h was okay
+    command rm grammartranslator.cc.h
+  else
+    echo generating new grammartranslator.h
+    mv grammartranslator.cc.h grammartranslator.h
+  fi
+else
+  echo generating grammartranslator.h
+  mv grammartranslator.cc.h grammartranslator.h
+fi
+sed -i '/#define yylex/d' ./grammartranslator.cc
+sed -i '/#define YYSTYPE/d' ./grammartranslator.cc

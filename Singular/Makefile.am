@@ -71,7 +71,11 @@ SOURCES = \
    mmstd.c claptmpl.cc\
    febase.cc \
    svd/libs/amp.cpp \
-   svd/libs/ap.cpp
+   svd/libs/ap.cpp \
+   translator/mstring.cc \
+   translator/toJulia.cc \
+   translator/msymtable.cc \
+   grammartranslator.cc
 
 #   links/slInit_Dynamic.cc
 
@@ -124,7 +128,11 @@ SingularHEADERS = \
    svd_si.h \
    svd/libs/amp.h  svd/libs/ap.h  svd/libs/stdafx.h \
    svd/bdsvd.h  svd/bidiagonal.h  svd/blas.h  svd/lq.h  svd/qr.h  svd/reflections.h \
-   svd/rotations.h  svd/svd.h
+   svd/rotations.h  svd/svd.h \
+   translator/mstring.h \
+   translator/toJulia.h \
+   translator/msymtable.h \
+   grammartranslator.h
 
 
 
@@ -210,6 +218,7 @@ libparse_SOURCES = libparse.cc fegetopt.c fegetopt.h utils.cc  utils.h
 libparse_LDADD = ${top_builddir}/omalloc/libomalloc.la
 libparse_LDFLAGS = -static ${AM_LDFLAGS}
 
+
 #########################################################
 # the Singular library (*.lib files)
 
@@ -221,7 +230,8 @@ singularlibrary_DATA = $(top_srcdir)/doc/singular.idx
 nobase_dist_singularlibrary_DATA = LIB/tst.lib LIB/help.cnf ${singularlibrary}
 EXTRA_DIST = grammar.y libparse.ll make_alllib.sh LIB/all.lib.tmpl \
              singular-libs LIB/help.cnf LIB/.singularrc LIB/COPYING \
-	     links/slInit_Dynamic.cc ../doc/singular.idx
+	     links/slInit_Dynamic.cc ../doc/singular.idx \
+	     grammartranslator.y
 
 singularalllibrarydir = ${datadir}/singular/LIB
 singularalllibrary = all.lib

@@ -312,6 +312,13 @@ void yyerror(const char * fmt)
 %left '.'
 %left ARROW
 
+/* Those symbols are not used here but in grammartranslator */
+/* They are declared here to match with table.h */
+%token <i> JULIA_ENDELSE_CMD
+%token <i> JULIA_ENDIF_CMD
+%token <i> JULIA_ENDLOOP_CMD
+%token <i> JULIA_ENDPROC_CMD
+/* end of not used symbols */
 %%
 lines:
         /**/
@@ -652,7 +659,7 @@ elemexpr:
         | extendedid  ARROW BLOCKTOK
           {
             if (iiARROW(&$$,$1,$3)) YYERROR;
-            omFree((ADDRESS)$3)
+            omFree((ADDRESS)$3);
           }
         | '(' exprlist ')'    { $$ = $2; }
         ;

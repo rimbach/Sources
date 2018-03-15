@@ -17,7 +17,13 @@
 #include "Singular/grammar.h"
 #include "Singular/tok.h"
 #include "Singular/attrib.h"
+#include "Singular/libparse.h"
 #include "Singular/fevoices.h" /* for sNoName_fe*/
+
+#define JL_TRANSLATOR_SUBEXPR
+#ifdef JL_TRANSLATOR_SUBEXPR
+#include "Singular/translator/mstring.h"
+#endif
 
 typedef enum { LANG_NONE, LANG_TOP, LANG_SINGULAR, LANG_C, LANG_MIX, LANG_MAX} language_defs;
 class proc_singular
@@ -104,6 +110,9 @@ class sleftv
                   */
     Subexpr e;    /* holds the indices for indexed values */
     package     req_packhdl;
+#ifdef JL_TRANSLATOR_SUBEXPR
+    mstring ms;
+#endif
     inline void Init() { memset(this,0,sizeof(*this)); }
     void CleanUp(ring r=currRing);
 
