@@ -4,10 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// #include <float.h>
-// #include <stdarg.h>
-
-// #define INITLEN 50
 
 struct mchar {
     char          _char;

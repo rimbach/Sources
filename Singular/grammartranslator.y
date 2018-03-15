@@ -370,13 +370,6 @@ void yyerror(const char * fmt)
 %token <i> RETURN
 %token <i> PARAMETER
 
-/* #ifdef JL_TRANSLATOR_GRAMMAR */
-/* %token <i> JULIA_ENDELSE_CMD */
-/* %token <i> JULIA_ENDIF_CMD */
-/* %token <i> JULIA_ENDLOOP_CMD */
-/* %token <i> JULIA_ENDPROC_CMD */
-/* #endif */
-
 /* system variables */
 %token <i> SYSVAR
 
@@ -401,7 +394,6 @@ void yyerror(const char * fmt)
 %type <lv> exportcmd killcmd listcmd parametercmd ringcmd scriptcmd setringcmd typecmd
 %type <lv> pprompt
 %type <lv> flowctrl ifcmd whilecmd example_dummy forcmd proccmd filecmd helpcmd
-/* %type <lv> elsecmd */
 %type <lv> returncmd
 %type <lv> listparametercmd
 /*#endif*/
@@ -520,35 +512,6 @@ lines:
             expected_parms = siCntrlc = FALSE;
           }
         ;
-
-/*ppromptTRANS:
-        elsecmd {
-#ifdef JL_TRANSLATOR_GRAMMAR
-            translator_NbRuleTraversed++;
-#ifdef JL_TRANSLATOR_GRAMMAR_DEBUG
-            printfrule(translator_NbRuleTraversed, "ppromptTRANS", "elsecmd");
-            printf("\n");
-#endif
-#endif 
-        }
-        | pprompt {
-#ifdef JL_TRANSLATOR_GRAMMAR
-            translator_NbRuleTraversed++;
-            if ((currentVoice != NULL)&&( (currentVoice->waitingForEnd) == 1)){
-                if ($1.ms) {
-                    $$.ms = mstring_concat(mstring_init_string("end\n"), $1.ms);
-                }
-                else {
-                    $$.ms = mstring_init_string("end");
-                }
-            }
-#ifdef JL_TRANSLATOR_GRAMMAR_DEBUG
-            printfrule(translator_NbRuleTraversed, "ppromptTRANS", "pprompt");
-            printf("\n");
-#endif
-#endif        
-        }
-        ;*/
         
 pprompt:
         flowctrl {                      /* if, while, for, proc */
@@ -955,8 +918,7 @@ elemexpr:
             syMake(&$$,$1);
 #ifdef JL_TRANSLATOR_GRAMMAR
             char * disp = mstring_to_str( ms );
-            
-/*             printf("name: %s, ring_decl? %d, is defined? %d \n", disp, ((int) currentVoice->ring_decl), (int) is_symbol_in_table_of_symbol(disp)); */
+
             if ( ( ((int) currentVoice->ring_decl)==1)
                &&( ((int) is_symbol_in_table_of_symbol(disp))==0 ))
                 $$.ms = ms_conc_s_ms_s( "p_mInit(pointer(Vector{UInt8}(\"", ms, "\")), _singular_actual_ring)" );
@@ -968,6 +930,8 @@ elemexpr:
 #ifdef JL_TRANSLATOR_GRAMMAR_DEBUG
             printfrule_ms(translator_NbRuleTraversed, "elemexpr", "extendedid", $$.ms);
 #endif
+// #else
+/*             syMake(&$$,$1); */
 #endif
 
           }
@@ -1003,7 +967,14 @@ elemexpr:
 #ifdef JL_TRANSLATOR_GRAMMAR    
             translator_NbRuleTraversed++;
             if ($1.next==NULL) {
-                $$.ms = ms_conc_s_ms_s("(", $3.ms, ")");
+            
+                $$.ms = $3.ms;
+                leftv voyager = &$3;
+                while (voyager->next!=NULL){
+                    $$.ms = ms_conc_ms_s_ms( $$.ms, ", ", voyager->next->ms);
+                    voyager = voyager->next;
+                }
+                $$.ms = ms_conc_s_ms_s("(", $$.ms, ")");
                 $$.ms = mstring_concat($1.ms, $$.ms);
             }
             else if ($1.rtyp==UNKNOWN) {
@@ -2623,40 +2594,6 @@ ifcmd: IF_CMD '(' expr ')' BLOCKTOK
           }
       ;
 
-/*elsecmd: 
-           ELSE_CMD BLOCKTOK
-          {
-#ifdef JL_TRANSLATOR_GRAMMAR
-            char * elseblock  = (char *) omAlloc (strlen($2)+50);
-            sprintf(elseblock, "%s\n", $2);
-            omFree((ADDRESS)$2);
-#else
-            if (currentVoice->ifsw==1)
-            {
-              currentVoice->ifsw=0;
-              newBuffer( $2, BT_else);
-            }
-            else
-            {
-              if (currentVoice->ifsw!=2)
-              {
-                Warn("`else` without `if` in level %d",myynest);
-              }
-              omFree((ADDRESS)$2);
-            }
-            currentVoice->ifsw=0;
-#endif
-#ifdef JL_TRANSLATOR_GRAMMAR
-          translator_NbRuleTraversed++;
-          $$.ms = mstring_init_string( "else " );
-          $$.ms = mstring_dedent($$.ms, 1);
-          newBuffer( elseblock, BT_else );
-#ifdef JL_TRANSLATOR_GRAMMAR_DEBUG
-          printfrule_ms(translator_NbRuleTraversed, "elsecmd", "ELSE_CMD BLOCKTOK", $$.ms);
-#endif
-#endif
-          }
-          ;*/
 whilecmd:
         WHILE_CMD STRINGTOK BLOCKTOK
           {
@@ -2839,7 +2776,7 @@ parametercmd:
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
             if ($2.Typ() == INT_CMD){
-                $2.ms = mstring_concat( $2.ms, mstring_init_string("::Int") );
+                $2.ms = mstring_concat( $2.ms, mstring_init_string("::Int32") );
             }
             else if ($2.Typ() == BIGINT_CMD) {
                 $2.ms = mstring_concat( $2.ms, mstring_init_string("::BigInt") );

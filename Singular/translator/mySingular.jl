@@ -96,13 +96,13 @@ end
 
 ###################################### THIS IS BECAUSE using Singular doesnt work for me
 
-include("/home/remi/.julia/v0.6/Singular/src/LibSingular.jl")
-include("/home/remi/.julia/v0.6/Singular/src/libsingular/LibSingularTypes.jl")
+# include("/home/remi/.julia/v0.6/Singular/src/LibSingular.jl")
+# include("/home/remi/.julia/v0.6/Singular/src/libsingular/LibSingularTypes.jl")
 
 # using Cxx
 # using Singular
-# include("/home/remi/.julia/v0.6/Singular/src/LibSingular.jl")
-# include("/home/remi/.julia/v0.6/Singular/src/libsingular/LibSingularTypes.jl")
+include("/home/remi/.julia/v0.6/Singular/src/LibSingular.jl")
+include("/home/remi/.julia/v0.6/Singular/src/libsingular/LibSingularTypes.jl")
 
 type LongComplexInfo
     float_len::Cshort
@@ -116,7 +116,7 @@ function p_mInit(rep::Ptr{UInt8}, r::ring)
     return n
 end
 
-# __init__()
+__init__()
 
 # _singular_actual_ring = libSingular.rDefault(libSingular.nInitChar( (Cxx.@cxx n_Q), Ptr{Void}(0) ),
 #                                                      [pointer(Vector{UInt8}(string(str)*"\0")) for str in ["x"]],

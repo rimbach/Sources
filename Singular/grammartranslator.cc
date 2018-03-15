@@ -775,25 +775,25 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   436,   436,   438,   554,   563,   575,   586,   598,   610,
-     620,   669,   681,   693,   704,   715,   730,   739,   748,   749,
-     758,   767,   768,   769,   773,   776,   785,   794,   803,   812,
-     821,   830,   839,   872,   934,   950,   974,   978,   989,  1001,
-    1033,  1061,  1096,  1109,  1122,  1133,  1137,  1141,  1145,  1149,
-    1153,  1157,  1168,  1179,  1190,  1194,  1198,  1202,  1206,  1210,
-    1214,  1218,  1222,  1226,  1230,  1259,  1263,  1267,  1271,  1275,
-    1279,  1292,  1315,  1328,  1340,  1350,  1354,  1358,  1362,  1366,
-    1370,  1374,  1378,  1382,  1386,  1403,  1417,  1416,  1434,  1442,
-    1450,  1459,  1472,  1485,  1498,  1511,  1537,  1550,  1563,  1574,
-    1585,  1598,  1609,  1620,  1639,  1656,  1667,  1695,  1706,  1718,
-    1737,  1742,  1760,  1776,  1812,  1838,  1859,  1874,  1886,  1895,
-    1920,  1935,  1951,  2003,  2012,  2028,  2037,  2049,  2063,  2065,
-    2067,  2082,  2087,  2092,  2099,  2107,  2119,  2136,  2156,  2160,
-    2164,  2169,  2173,  2177,  2181,  2185,  2190,  2196,  2202,  2208,
-    2214,  2220,  2226,  2238,  2245,  2258,  2336,  2350,  2362,  2382,
-    2388,  2388,  2391,  2459,  2471,  2508,  2541,  2572,  2605,  2614,
-    2619,  2661,  2691,  2737,  2754,  2807,  2837,  2860,  2879,  2898,
-    2918,  2939,  2949
+       0,   428,   428,   430,   517,   526,   538,   549,   561,   573,
+     583,   632,   644,   656,   667,   678,   693,   702,   711,   712,
+     721,   730,   731,   732,   736,   739,   748,   757,   766,   775,
+     784,   793,   802,   835,   897,   913,   938,   942,   953,   965,
+    1004,  1032,  1067,  1080,  1093,  1104,  1108,  1112,  1116,  1120,
+    1124,  1128,  1139,  1150,  1161,  1165,  1169,  1173,  1177,  1181,
+    1185,  1189,  1193,  1197,  1201,  1230,  1234,  1238,  1242,  1246,
+    1250,  1263,  1286,  1299,  1311,  1321,  1325,  1329,  1333,  1337,
+    1341,  1345,  1349,  1353,  1357,  1374,  1388,  1387,  1405,  1413,
+    1421,  1430,  1443,  1456,  1469,  1482,  1508,  1521,  1534,  1545,
+    1556,  1569,  1580,  1591,  1610,  1627,  1638,  1666,  1677,  1689,
+    1708,  1713,  1731,  1747,  1783,  1809,  1830,  1845,  1857,  1866,
+    1891,  1906,  1922,  1974,  1983,  1999,  2008,  2020,  2034,  2036,
+    2038,  2053,  2058,  2063,  2070,  2078,  2090,  2107,  2127,  2131,
+    2135,  2140,  2144,  2148,  2152,  2156,  2161,  2167,  2173,  2179,
+    2185,  2191,  2197,  2209,  2216,  2229,  2307,  2321,  2333,  2353,
+    2359,  2359,  2362,  2430,  2442,  2479,  2512,  2543,  2576,  2585,
+    2590,  2598,  2628,  2674,  2691,  2744,  2774,  2797,  2816,  2835,
+    2855,  2876,  2886
 };
 #endif
 
@@ -2282,7 +2282,7 @@ yyreduce:
   switch (yyn)
     {
         case 3:
-#line 439 "grammartranslator.y" /* yacc.c:1646  */
+#line 431 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             
@@ -2370,7 +2370,7 @@ yyreduce:
     break;
 
   case 4:
-#line 554 "grammartranslator.y" /* yacc.c:1646  */
+#line 517 "grammartranslator.y" /* yacc.c:1646  */
     {                      /* if, while, for, proc */
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2384,7 +2384,7 @@ yyreduce:
     break;
 
   case 5:
-#line 564 "grammartranslator.y" /* yacc.c:1646  */
+#line 527 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2400,7 +2400,7 @@ yyreduce:
     break;
 
   case 6:
-#line 575 "grammartranslator.y" /* yacc.c:1646  */
+#line 538 "grammartranslator.y" /* yacc.c:1646  */
     {     /* default initialization */
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2416,7 +2416,7 @@ yyreduce:
     break;
 
   case 7:
-#line 587 "grammartranslator.y" /* yacc.c:1646  */
+#line 550 "grammartranslator.y" /* yacc.c:1646  */
     {
 /*             YYACCEPT; */
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -2432,7 +2432,7 @@ yyreduce:
     break;
 
   case 8:
-#line 599 "grammartranslator.y" /* yacc.c:1646  */
+#line 562 "grammartranslator.y" /* yacc.c:1646  */
     {
             currentVoice->ifsw=0;
             iiDebug();
@@ -2448,7 +2448,7 @@ yyreduce:
     break;
 
   case 9:
-#line 610 "grammartranslator.y" /* yacc.c:1646  */
+#line 573 "grammartranslator.y" /* yacc.c:1646  */
     {                    /* ignore empty statements */
           currentVoice->ifsw=0;
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -2463,7 +2463,7 @@ yyreduce:
     break;
 
   case 10:
-#line 621 "grammartranslator.y" /* yacc.c:1646  */
+#line 584 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             siq=0;
@@ -2516,7 +2516,7 @@ yyreduce:
     break;
 
   case 11:
-#line 669 "grammartranslator.y" /* yacc.c:1646  */
+#line 632 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2533,7 +2533,7 @@ yyreduce:
     break;
 
   case 12:
-#line 681 "grammartranslator.y" /* yacc.c:1646  */
+#line 644 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2550,7 +2550,7 @@ yyreduce:
     break;
 
   case 13:
-#line 693 "grammartranslator.y" /* yacc.c:1646  */
+#line 656 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2566,7 +2566,7 @@ yyreduce:
     break;
 
   case 14:
-#line 704 "grammartranslator.y" /* yacc.c:1646  */
+#line 667 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2582,7 +2582,7 @@ yyreduce:
     break;
 
   case 15:
-#line 715 "grammartranslator.y" /* yacc.c:1646  */
+#line 678 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2599,7 +2599,7 @@ yyreduce:
     break;
 
   case 16:
-#line 730 "grammartranslator.y" /* yacc.c:1646  */
+#line 693 "grammartranslator.y" /* yacc.c:1646  */
     { 
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2613,7 +2613,7 @@ yyreduce:
     break;
 
   case 17:
-#line 739 "grammartranslator.y" /* yacc.c:1646  */
+#line 702 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2627,7 +2627,7 @@ yyreduce:
     break;
 
   case 19:
-#line 749 "grammartranslator.y" /* yacc.c:1646  */
+#line 712 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2641,7 +2641,7 @@ yyreduce:
     break;
 
   case 20:
-#line 758 "grammartranslator.y" /* yacc.c:1646  */
+#line 721 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2655,19 +2655,19 @@ yyreduce:
     break;
 
   case 23:
-#line 770 "grammartranslator.y" /* yacc.c:1646  */
+#line 733 "grammartranslator.y" /* yacc.c:1646  */
     {if (currentVoice!=NULL) currentVoice->ifsw=0;}
 #line 2663 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 773 "grammartranslator.y" /* yacc.c:1646  */
+#line 736 "grammartranslator.y" /* yacc.c:1646  */
     { omFree((ADDRESS)(yyvsp[0].name)); }
 #line 2669 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 776 "grammartranslator.y" /* yacc.c:1646  */
+#line 739 "grammartranslator.y" /* yacc.c:1646  */
     { 
 #ifdef JL_TRANSLATOR_GRAMMAR
             (yyval.lv).ms = (yyvsp[0].lv).ms;
@@ -2681,7 +2681,7 @@ yyreduce:
     break;
 
   case 26:
-#line 785 "grammartranslator.y" /* yacc.c:1646  */
+#line 748 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2695,7 +2695,7 @@ yyreduce:
     break;
 
   case 27:
-#line 794 "grammartranslator.y" /* yacc.c:1646  */
+#line 757 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2709,7 +2709,7 @@ yyreduce:
     break;
 
   case 28:
-#line 803 "grammartranslator.y" /* yacc.c:1646  */
+#line 766 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2723,7 +2723,7 @@ yyreduce:
     break;
 
   case 29:
-#line 812 "grammartranslator.y" /* yacc.c:1646  */
+#line 775 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2737,7 +2737,7 @@ yyreduce:
     break;
 
   case 30:
-#line 821 "grammartranslator.y" /* yacc.c:1646  */
+#line 784 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2751,7 +2751,7 @@ yyreduce:
     break;
 
   case 31:
-#line 830 "grammartranslator.y" /* yacc.c:1646  */
+#line 793 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2765,7 +2765,7 @@ yyreduce:
     break;
 
   case 32:
-#line 839 "grammartranslator.y" /* yacc.c:1646  */
+#line 802 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2801,7 +2801,7 @@ yyreduce:
     break;
 
   case 33:
-#line 873 "grammartranslator.y" /* yacc.c:1646  */
+#line 836 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -2864,7 +2864,7 @@ yyreduce:
     break;
 
   case 34:
-#line 935 "grammartranslator.y" /* yacc.c:1646  */
+#line 898 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             mstring ms = mstring_init_string((yyvsp[0].name));
@@ -2884,7 +2884,7 @@ yyreduce:
     break;
 
   case 35:
-#line 951 "grammartranslator.y" /* yacc.c:1646  */
+#line 914 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             mstring ms = mstring_init_string((yyvsp[0].name));
@@ -2892,8 +2892,7 @@ yyreduce:
             syMake(&(yyval.lv),(yyvsp[0].name));
 #ifdef JL_TRANSLATOR_GRAMMAR
             char * disp = mstring_to_str( ms );
-            
-/*             printf("name: %s, ring_decl? %d, is defined? %d \n", disp, ((int) currentVoice->ring_decl), (int) is_symbol_in_table_of_symbol(disp)); */
+
             if ( ( ((int) currentVoice->ring_decl)==1)
                &&( ((int) is_symbol_in_table_of_symbol(disp))==0 ))
                 (yyval.lv).ms = ms_conc_s_ms_s( "p_mInit(pointer(Vector{UInt8}(\"", ms, "\")), _singular_actual_ring)" );
@@ -2905,22 +2904,24 @@ yyreduce:
 #ifdef JL_TRANSLATOR_GRAMMAR_DEBUG
             printfrule_ms(translator_NbRuleTraversed, "elemexpr", "extendedid", (yyval.lv).ms);
 #endif
+// #else
+/*             syMake(&$$,$1); */
 #endif
 
           }
-#line 2914 "grammartranslator.cc" /* yacc.c:1646  */
+#line 2915 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 36:
-#line 975 "grammartranslator.y" /* yacc.c:1646  */
+#line 939 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith2(&(yyval.lv), &(yyvsp[-2].lv), COLONCOLON, &(yyvsp[0].lv))) YYERROR;
           }
-#line 2922 "grammartranslator.cc" /* yacc.c:1646  */
+#line 2923 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 979 "grammartranslator.y" /* yacc.c:1646  */
+#line 943 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith2(&(yyval.lv), &(yyvsp[-2].lv), '.', &(yyvsp[0].lv))) YYERROR;
 #ifdef JL_TRANSLATOR_GRAMMAR    
@@ -2931,11 +2932,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 2937 "grammartranslator.cc" /* yacc.c:1646  */
+#line 2938 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 38:
-#line 990 "grammartranslator.y" /* yacc.c:1646  */
+#line 954 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR    
             translator_NbRuleTraversed++;
@@ -2947,16 +2948,23 @@ yyreduce:
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-2].lv),'(')) YYERROR;
 #endif
           }
-#line 2953 "grammartranslator.cc" /* yacc.c:1646  */
+#line 2954 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 39:
-#line 1002 "grammartranslator.y" /* yacc.c:1646  */
+#line 966 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR    
             translator_NbRuleTraversed++;
             if ((yyvsp[-3].lv).next==NULL) {
-                (yyval.lv).ms = ms_conc_s_ms_s("(", (yyvsp[-1].lv).ms, ")");
+            
+                (yyval.lv).ms = (yyvsp[-1].lv).ms;
+                leftv voyager = &(yyvsp[-1].lv);
+                while (voyager->next!=NULL){
+                    (yyval.lv).ms = ms_conc_ms_s_ms( (yyval.lv).ms, ", ", voyager->next->ms);
+                    voyager = voyager->next;
+                }
+                (yyval.lv).ms = ms_conc_s_ms_s("(", (yyval.lv).ms, ")");
                 (yyval.lv).ms = mstring_concat((yyvsp[-3].lv).ms, (yyval.lv).ms);
             }
             else if ((yyvsp[-3].lv).rtyp==UNKNOWN) {
@@ -2983,11 +2991,11 @@ yyreduce:
             else YYERROR;
 #endif
           }
-#line 2989 "grammartranslator.cc" /* yacc.c:1646  */
+#line 2997 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 40:
-#line 1034 "grammartranslator.y" /* yacc.c:1646  */
+#line 1005 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (currRingHdl==NULL) MYYERROR("no ring active");
             int j = 0;
@@ -3015,11 +3023,11 @@ yyreduce:
             }
             (yyvsp[-1].lv).CleanUp();
           }
-#line 3021 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3029 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 41:
-#line 1062 "grammartranslator.y" /* yacc.c:1646  */
+#line 1033 "grammartranslator.y" /* yacc.c:1646  */
     {
             memset(&(yyval.lv),0,sizeof((yyval.lv)));
             int i = atoi((yyvsp[0].name));
@@ -3054,11 +3062,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 3060 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3068 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 42:
-#line 1097 "grammartranslator.y" /* yacc.c:1646  */
+#line 1068 "grammartranslator.y" /* yacc.c:1646  */
     {
             memset(&(yyval.lv),0,sizeof((yyval.lv)));
             (yyval.lv).rtyp = (yyvsp[0].i);
@@ -3071,11 +3079,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 3077 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3085 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 43:
-#line 1110 "grammartranslator.y" /* yacc.c:1646  */
+#line 1081 "grammartranslator.y" /* yacc.c:1646  */
     {
             memset(&(yyval.lv),0,sizeof((yyval.lv)));
             (yyval.lv).rtyp  = STRING_CMD;
@@ -3088,11 +3096,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 3094 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3102 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 44:
-#line 1123 "grammartranslator.y" /* yacc.c:1646  */
+#line 1094 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3103,59 +3111,59 @@ yyreduce:
 #endif
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
-#line 3109 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 45:
-#line 1134 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
-          }
 #line 3117 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 46:
-#line 1138 "grammartranslator.y" /* yacc.c:1646  */
+  case 45:
+#line 1105 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArithM(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
+            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
 #line 3125 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 47:
-#line 1142 "grammartranslator.y" /* yacc.c:1646  */
+  case 46:
+#line 1109 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArithM(&(yyval.lv),NULL,(yyvsp[-2].i))) YYERROR;
+            if(iiExprArithM(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
 #line 3133 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 48:
-#line 1146 "grammartranslator.y" /* yacc.c:1646  */
+  case 47:
+#line 1113 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
+            if(iiExprArithM(&(yyval.lv),NULL,(yyvsp[-2].i))) YYERROR;
           }
 #line 3141 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 49:
-#line 1150 "grammartranslator.y" /* yacc.c:1646  */
+  case 48:
+#line 1117 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArithM(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
+            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
 #line 3149 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 50:
-#line 1154 "grammartranslator.y" /* yacc.c:1646  */
+  case 49:
+#line 1121 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArithM(&(yyval.lv),NULL,(yyvsp[-2].i))) YYERROR;
+            if(iiExprArithM(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
 #line 3157 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 50:
+#line 1125 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            if(iiExprArithM(&(yyval.lv),NULL,(yyvsp[-2].i))) YYERROR;
+          }
+#line 3165 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 51:
-#line 1158 "grammartranslator.y" /* yacc.c:1646  */
+#line 1129 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3166,11 +3174,11 @@ yyreduce:
 #endif
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
-#line 3172 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3180 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 52:
-#line 1169 "grammartranslator.y" /* yacc.c:1646  */
+#line 1140 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3181,11 +3189,11 @@ yyreduce:
 #endif
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
-#line 3187 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3195 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 53:
-#line 1180 "grammartranslator.y" /* yacc.c:1646  */
+#line 1151 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3196,91 +3204,91 @@ yyreduce:
 #endif
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
-#line 3202 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 54:
-#line 1191 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
-          }
 #line 3210 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 55:
-#line 1195 "grammartranslator.y" /* yacc.c:1646  */
+  case 54:
+#line 1162 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),(yyvsp[-5].i),&(yyvsp[-1].lv),TRUE)) YYERROR;
+            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
 #line 3218 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 56:
-#line 1199 "grammartranslator.y" /* yacc.c:1646  */
+  case 55:
+#line 1166 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),(yyvsp[-5].i),&(yyvsp[-1].lv),TRUE)) YYERROR;
           }
 #line 3226 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 57:
-#line 1203 "grammartranslator.y" /* yacc.c:1646  */
+  case 56:
+#line 1170 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),(yyvsp[-5].i),&(yyvsp[-1].lv),TRUE)) YYERROR;
           }
 #line 3234 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 58:
-#line 1207 "grammartranslator.y" /* yacc.c:1646  */
+  case 57:
+#line 1174 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),(yyvsp[-5].i),&(yyvsp[-1].lv),TRUE)) YYERROR;
           }
 #line 3242 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 59:
-#line 1211 "grammartranslator.y" /* yacc.c:1646  */
+  case 58:
+#line 1178 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
+            if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),(yyvsp[-5].i),&(yyvsp[-1].lv),TRUE)) YYERROR;
           }
 #line 3250 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 60:
-#line 1215 "grammartranslator.y" /* yacc.c:1646  */
+  case 59:
+#line 1182 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3258 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 61:
-#line 1219 "grammartranslator.y" /* yacc.c:1646  */
+  case 60:
+#line 1186 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3266 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 62:
-#line 1223 "grammartranslator.y" /* yacc.c:1646  */
+  case 61:
+#line 1190 "grammartranslator.y" /* yacc.c:1646  */
     {
             if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3274 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 63:
-#line 1227 "grammartranslator.y" /* yacc.c:1646  */
+  case 62:
+#line 1194 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArithM(&(yyval.lv),NULL,(yyvsp[-2].i))) YYERROR;
+            if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3282 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 63:
+#line 1198 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            if(iiExprArithM(&(yyval.lv),NULL,(yyvsp[-2].i))) YYERROR;
+          }
+#line 3290 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 64:
-#line 1231 "grammartranslator.y" /* yacc.c:1646  */
+#line 1202 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             int b;
@@ -3309,51 +3317,51 @@ yyreduce:
             if (b==2) YYACCEPT;
 #endif
           }
-#line 3315 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 65:
-#line 1260 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
-          }
 #line 3323 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 66:
-#line 1264 "grammartranslator.y" /* yacc.c:1646  */
+  case 65:
+#line 1231 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
+            if(iiExprArith3(&(yyval.lv),(yyvsp[-7].i),&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3331 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 67:
-#line 1268 "grammartranslator.y" /* yacc.c:1646  */
+  case 66:
+#line 1235 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith3(&(yyval.lv),RING_CMD,&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
+            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),(yyvsp[-3].i))) YYERROR;
           }
 #line 3339 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 68:
-#line 1272 "grammartranslator.y" /* yacc.c:1646  */
+  case 67:
+#line 1239 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),RING_CMD)) YYERROR;
+            if(iiExprArith3(&(yyval.lv),RING_CMD,&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3347 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 69:
-#line 1276 "grammartranslator.y" /* yacc.c:1646  */
+  case 68:
+#line 1243 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if (iiARROW(&(yyval.lv),(yyvsp[-2].name),(yyvsp[0].name))) YYERROR;
+            if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),RING_CMD)) YYERROR;
           }
 #line 3355 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 69:
+#line 1247 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            if (iiARROW(&(yyval.lv),(yyvsp[-2].name),(yyvsp[0].name))) YYERROR;
+          }
+#line 3363 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 70:
-#line 1279 "grammartranslator.y" /* yacc.c:1646  */
+#line 1250 "grammartranslator.y" /* yacc.c:1646  */
     { 
             (yyval.lv) = (yyvsp[-1].lv); 
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -3364,11 +3372,11 @@ yyreduce:
 #endif
 #endif
             }
-#line 3370 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3378 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 71:
-#line 1293 "grammartranslator.y" /* yacc.c:1646  */
+#line 1264 "grammartranslator.y" /* yacc.c:1646  */
     {
 // #ifdef JL_TRANSLATOR_GRAMMAR 
 //             mstring ms;
@@ -3391,11 +3399,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 3397 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3405 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 72:
-#line 1316 "grammartranslator.y" /* yacc.c:1646  */
+#line 1287 "grammartranslator.y" /* yacc.c:1646  */
     {
             (yyval.lv) = (yyvsp[0].lv);
 #ifdef JL_TRANSLATOR_GRAMMAR            
@@ -3406,11 +3414,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 3412 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3420 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 73:
-#line 1329 "grammartranslator.y" /* yacc.c:1646  */
+#line 1300 "grammartranslator.y" /* yacc.c:1646  */
     {
             /*if ($1.typ == eunknown) YYERROR;*/
             (yyval.lv) = (yyvsp[0].lv);
@@ -3422,11 +3430,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 3428 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3436 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 74:
-#line 1340 "grammartranslator.y" /* yacc.c:1646  */
+#line 1311 "grammartranslator.y" /* yacc.c:1646  */
     { 
             (yyval.lv) = (yyvsp[0].lv); 
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -3437,83 +3445,83 @@ yyreduce:
 #endif
 #endif
             }
-#line 3443 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 75:
-#line 1351 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            if(iiExprArith3(&(yyval.lv),'[',&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
-          }
 #line 3451 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 76:
-#line 1355 "grammartranslator.y" /* yacc.c:1646  */
+  case 75:
+#line 1322 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),'[',&(yyvsp[-1].lv))) YYERROR;
+            if(iiExprArith3(&(yyval.lv),'[',&(yyvsp[-5].lv),&(yyvsp[-3].lv),&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3459 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 77:
-#line 1359 "grammartranslator.y" /* yacc.c:1646  */
+  case 76:
+#line 1326 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), (yyvsp[-1].i), NULL)) YYERROR;
+            if(iiExprArith2(&(yyval.lv),&(yyvsp[-3].lv),'[',&(yyvsp[-1].lv))) YYERROR;
           }
 #line 3467 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 78:
-#line 1363 "grammartranslator.y" /* yacc.c:1646  */
+  case 77:
+#line 1330 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), (yyvsp[-1].i), NULL)) YYERROR;
           }
 #line 3475 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 79:
-#line 1367 "grammartranslator.y" /* yacc.c:1646  */
+  case 78:
+#line 1334 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), (yyvsp[-1].i), NULL)) YYERROR;
           }
 #line 3483 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 80:
-#line 1371 "grammartranslator.y" /* yacc.c:1646  */
+  case 79:
+#line 1338 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), (yyvsp[-1].i), NULL)) YYERROR;
           }
 #line 3491 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 81:
-#line 1375 "grammartranslator.y" /* yacc.c:1646  */
+  case 80:
+#line 1342 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), (yyvsp[-1].i), NULL)) YYERROR;
           }
 #line 3499 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 82:
-#line 1379 "grammartranslator.y" /* yacc.c:1646  */
+  case 81:
+#line 1346 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), 0, &(yyvsp[-1].lv))) YYERROR;
+            if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), (yyvsp[-1].i), NULL)) YYERROR;
           }
 #line 3507 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 83:
-#line 1383 "grammartranslator.y" /* yacc.c:1646  */
+  case 82:
+#line 1350 "grammartranslator.y" /* yacc.c:1646  */
     {
-            (yyval.lv)=(yyvsp[-1].lv);
+            if (iiApply(&(yyval.lv), &(yyvsp[-3].lv), 0, &(yyvsp[-1].lv))) YYERROR;
           }
 #line 3515 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 83:
+#line 1354 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            (yyval.lv)=(yyvsp[-1].lv);
+          }
+#line 3523 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 84:
-#line 1387 "grammartranslator.y" /* yacc.c:1646  */
+#line 1358 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             siq++;
@@ -3530,11 +3538,11 @@ yyreduce:
             siq--;
             #endif
           }
-#line 3536 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3544 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 85:
-#line 1404 "grammartranslator.y" /* yacc.c:1646  */
+#line 1375 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3547,21 +3555,21 @@ yyreduce:
             memset(&(yyval.lv),0,sizeof((yyval.lv)));
             (yyval.lv).rtyp=NONE;
           }
-#line 3553 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3561 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 86:
-#line 1417 "grammartranslator.y" /* yacc.c:1646  */
+#line 1388 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             siq--;
             #endif
           }
-#line 3563 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3571 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 87:
-#line 1423 "grammartranslator.y" /* yacc.c:1646  */
+#line 1394 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             if (siq<=0) (yyvsp[-1].lv).Eval();
@@ -3571,41 +3579,41 @@ yyreduce:
             siq++;
             #endif
           }
-#line 3577 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3585 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 88:
-#line 1435 "grammartranslator.y" /* yacc.c:1646  */
+#line 1406 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             siq++;
             #endif
           }
-#line 3587 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3595 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 89:
-#line 1443 "grammartranslator.y" /* yacc.c:1646  */
+#line 1414 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             siq++;
             #endif
           }
-#line 3597 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3605 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 90:
-#line 1451 "grammartranslator.y" /* yacc.c:1646  */
+#line 1422 "grammartranslator.y" /* yacc.c:1646  */
     {
             #ifdef SIQ
             siq--;
             #endif
           }
-#line 3607 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3615 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 91:
-#line 1460 "grammartranslator.y" /* yacc.c:1646  */
+#line 1431 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3618,11 +3626,11 @@ yyreduce:
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),PLUSPLUS)) YYERROR;
 #endif
           }
-#line 3624 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3632 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 92:
-#line 1473 "grammartranslator.y" /* yacc.c:1646  */
+#line 1444 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3635,11 +3643,11 @@ yyreduce:
             if(iiExprArith1(&(yyval.lv),&(yyvsp[-1].lv),MINUSMINUS)) YYERROR;
 #endif
           }
-#line 3641 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3649 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 93:
-#line 1486 "grammartranslator.y" /* yacc.c:1646  */
+#line 1457 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3652,11 +3660,11 @@ yyreduce:
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),'+',&(yyvsp[0].lv))) YYERROR;
 #endif
           }
-#line 3658 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3666 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 94:
-#line 1499 "grammartranslator.y" /* yacc.c:1646  */
+#line 1470 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3669,11 +3677,11 @@ yyreduce:
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),'-',&(yyvsp[0].lv))) YYERROR;
 #endif
           }
-#line 3675 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3683 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 95:
-#line 1512 "grammartranslator.y" /* yacc.c:1646  */
+#line 1483 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3699,11 +3707,11 @@ yyreduce:
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),(yyvsp[-1].i),&(yyvsp[0].lv))) YYERROR;
 #endif
           }
-#line 3705 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3713 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 96:
-#line 1538 "grammartranslator.y" /* yacc.c:1646  */
+#line 1509 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3716,11 +3724,11 @@ yyreduce:
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),'^',&(yyvsp[0].lv))) YYERROR;
 #endif
           }
-#line 3722 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3730 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 97:
-#line 1551 "grammartranslator.y" /* yacc.c:1646  */
+#line 1522 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3733,11 +3741,11 @@ yyreduce:
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),(yyvsp[-1].i),&(yyvsp[0].lv))) YYERROR;
 #endif
           }
-#line 3739 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3747 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 98:
-#line 1564 "grammartranslator.y" /* yacc.c:1646  */
+#line 1535 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3748,11 +3756,11 @@ yyreduce:
 #endif
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),(yyvsp[-1].i),&(yyvsp[0].lv))) YYERROR;
           }
-#line 3754 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3762 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 99:
-#line 1575 "grammartranslator.y" /* yacc.c:1646  */
+#line 1546 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3763,11 +3771,11 @@ yyreduce:
 #endif
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),NOTEQUAL,&(yyvsp[0].lv))) YYERROR;
           }
-#line 3769 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3777 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 100:
-#line 1586 "grammartranslator.y" /* yacc.c:1646  */
+#line 1557 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3780,11 +3788,11 @@ yyreduce:
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),EQUAL_EQUAL,&(yyvsp[0].lv))) YYERROR;
 #endif
           }
-#line 3786 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3794 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 101:
-#line 1599 "grammartranslator.y" /* yacc.c:1646  */
+#line 1570 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3795,11 +3803,11 @@ yyreduce:
 #endif
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),DOTDOT,&(yyvsp[0].lv))) YYERROR;
           }
-#line 3801 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3809 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 102:
-#line 1610 "grammartranslator.y" /* yacc.c:1646  */
+#line 1581 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3810,11 +3818,11 @@ yyreduce:
 #endif
             if(iiExprArith2(&(yyval.lv),&(yyvsp[-2].lv),':',&(yyvsp[0].lv))) YYERROR;
           }
-#line 3816 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3824 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 103:
-#line 1621 "grammartranslator.y" /* yacc.c:1646  */
+#line 1592 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3833,11 +3841,11 @@ yyreduce:
               (yyval.lv).data = (void *)(long)(i == 0 ? 1 : 0);
             }
           }
-#line 3839 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3847 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 104:
-#line 1640 "grammartranslator.y" /* yacc.c:1646  */
+#line 1611 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3851,11 +3859,11 @@ yyreduce:
             if(iiExprArith1(&(yyval.lv),&(yyvsp[0].lv),'-')) YYERROR;
 #endif
           }
-#line 3857 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3865 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 105:
-#line 1656 "grammartranslator.y" /* yacc.c:1646  */
+#line 1627 "grammartranslator.y" /* yacc.c:1646  */
     {
             (yyval.lv) = (yyvsp[-1].lv); 
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -3867,11 +3875,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 3873 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3881 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 106:
-#line 1668 "grammartranslator.y" /* yacc.c:1646  */
+#line 1639 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             (yyval.lv).ms = (yyvsp[-1].lv).ms;
@@ -3895,11 +3903,11 @@ yyreduce:
             (yyval.lv) = (yyvsp[-1].lv);
 #endif
           }
-#line 3901 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3909 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 107:
-#line 1695 "grammartranslator.y" /* yacc.c:1646  */
+#line 1666 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -3911,11 +3919,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 3917 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3925 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 108:
-#line 1707 "grammartranslator.y" /* yacc.c:1646  */
+#line 1678 "grammartranslator.y" /* yacc.c:1646  */
     {
             if ((yyvsp[-1].lv).Typ()!=STRING_CMD)
             {
@@ -3924,11 +3932,11 @@ yyreduce:
             (yyval.name) = (char *)(yyvsp[-1].lv).CopyD(STRING_CMD);
             (yyvsp[-1].lv).CleanUp();
           }
-#line 3930 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3938 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 109:
-#line 1719 "grammartranslator.y" /* yacc.c:1646  */
+#line 1690 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             mstring ms = mstring_init_mstring((yyvsp[0].lv).ms);
@@ -3947,20 +3955,20 @@ yyreduce:
               YYERROR;
 #endif
           }
-#line 3953 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3961 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 110:
-#line 1738 "grammartranslator.y" /* yacc.c:1646  */
+#line 1709 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (iiDeclCommand(&(yyval.lv),&(yyvsp[0].lv),myynest,(yyvsp[-1].i),&((yyvsp[0].lv).req_packhdl->idroot)))
               YYERROR;
           }
-#line 3962 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3970 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 111:
-#line 1743 "grammartranslator.y" /* yacc.c:1646  */
+#line 1714 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             mstring ms = mstring_init_mstring((yyvsp[0].lv).ms);
@@ -3978,11 +3986,11 @@ yyreduce:
             if (iiDeclCommand(&(yyval.lv),&(yyvsp[0].lv),myynest,(yyvsp[-1].i),&(currRing->idroot), TRUE)) YYERROR;
 #endif
           }
-#line 3984 "grammartranslator.cc" /* yacc.c:1646  */
+#line 3992 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 112:
-#line 1761 "grammartranslator.y" /* yacc.c:1646  */
+#line 1732 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             mstring ms = mstring_init_mstring((yyvsp[0].lv).ms);
@@ -3998,11 +4006,11 @@ yyreduce:
             if (iiDeclCommand(&(yyval.lv),&(yyvsp[0].lv),myynest,(yyvsp[-1].i),&(currRing->idroot), TRUE)) YYERROR;
 #endif
           }
-#line 4004 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4012 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 113:
-#line 1777 "grammartranslator.y" /* yacc.c:1646  */
+#line 1748 "grammartranslator.y" /* yacc.c:1646  */
     {
             int r; TESTSETINT((yyvsp[-4].lv),r);
             int c; TESTSETINT((yyvsp[-1].lv),c);
@@ -4038,11 +4046,11 @@ yyreduce:
               if (IDBIMAT(h)==NULL) YYERROR;
             }
           }
-#line 4044 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4052 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 114:
-#line 1813 "grammartranslator.y" /* yacc.c:1646  */
+#line 1784 "grammartranslator.y" /* yacc.c:1646  */
     {
             if ((yyvsp[-1].i) == MATRIX_CMD)
             {
@@ -4068,11 +4076,11 @@ yyreduce:
                 YYERROR;
             }
           }
-#line 4074 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4082 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 115:
-#line 1839 "grammartranslator.y" /* yacc.c:1646  */
+#line 1810 "grammartranslator.y" /* yacc.c:1646  */
     {
             int t=(yyvsp[-2].lv).Typ();
             sleftv r;
@@ -4093,11 +4101,11 @@ yyreduce:
             memcpy(v->next,&r,sizeof(sleftv));
             (yyval.lv)=(yyvsp[-2].lv);
           }
-#line 4099 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4107 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 116:
-#line 1860 "grammartranslator.y" /* yacc.c:1646  */
+#line 1831 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (iiDeclCommand(&(yyval.lv),&(yyvsp[0].lv),myynest,(yyvsp[-1].i),&((yyvsp[0].lv).req_packhdl->idroot)))
               YYERROR;
@@ -4109,11 +4117,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4115 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4123 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 117:
-#line 1874 "grammartranslator.y" /* yacc.c:1646  */
+#line 1845 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -4123,11 +4131,11 @@ yyreduce:
 #endif
 #endif        
 }
-#line 4129 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4137 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 118:
-#line 1886 "grammartranslator.y" /* yacc.c:1646  */
+#line 1857 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             (yyval.lv).ms = (yyvsp[0].lv).ms;
@@ -4137,11 +4145,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 4143 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4151 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 119:
-#line 1896 "grammartranslator.y" /* yacc.c:1646  */
+#line 1867 "grammartranslator.y" /* yacc.c:1646  */
     {
 // #ifdef JL_TRANSLATOR_GRAMMAR 
 //             mstring ms;
@@ -4163,11 +4171,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4169 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4177 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 120:
-#line 1921 "grammartranslator.y" /* yacc.c:1646  */
+#line 1892 "grammartranslator.y" /* yacc.c:1646  */
     {
           // let rInit take care of any errors
           (yyval.i)=rOrderName((yyvsp[0].name));
@@ -4179,11 +4187,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 4185 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4193 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 121:
-#line 1936 "grammartranslator.y" /* yacc.c:1646  */
+#line 1907 "grammartranslator.y" /* yacc.c:1646  */
     {
             memset(&(yyval.lv),0,sizeof((yyval.lv)));
             intvec *iv = new intvec(2);
@@ -4199,11 +4207,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4205 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4213 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 122:
-#line 1952 "grammartranslator.y" /* yacc.c:1646  */
+#line 1923 "grammartranslator.y" /* yacc.c:1646  */
     {
             memset(&(yyval.lv),0,sizeof((yyval.lv)));
             leftv sl = &(yyvsp[-1].lv);
@@ -4252,11 +4260,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4258 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4266 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 123:
-#line 2003 "grammartranslator.y" /* yacc.c:1646  */
+#line 1974 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -4266,11 +4274,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 4272 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4280 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 124:
-#line 2013 "grammartranslator.y" /* yacc.c:1646  */
+#line 1984 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -4283,11 +4291,11 @@ yyreduce:
             (yyval.lv).next = (sleftv *)omAllocBin(sleftv_bin);
             memcpy((yyval.lv).next,&(yyvsp[0].lv),sizeof(sleftv));
           }
-#line 4289 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4297 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 125:
-#line 2028 "grammartranslator.y" /* yacc.c:1646  */
+#line 1999 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             (yyval.lv).ms = (yyvsp[0].lv).ms;
@@ -4297,11 +4305,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 4303 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4311 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 126:
-#line 2038 "grammartranslator.y" /* yacc.c:1646  */
+#line 2009 "grammartranslator.y" /* yacc.c:1646  */
     {
             (yyval.lv) = (yyvsp[-1].lv);
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -4311,11 +4319,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4317 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4325 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 127:
-#line 2050 "grammartranslator.y" /* yacc.c:1646  */
+#line 2021 "grammartranslator.y" /* yacc.c:1646  */
     {
             expected_parms = TRUE;
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -4326,61 +4334,61 @@ yyreduce:
 #endif
 #endif
           }
-#line 4332 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4340 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 128:
-#line 2064 "grammartranslator.y" /* yacc.c:1646  */
+#line 2035 "grammartranslator.y" /* yacc.c:1646  */
     { (yyval.i) = (yyvsp[0].i); }
-#line 4338 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4346 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 129:
-#line 2066 "grammartranslator.y" /* yacc.c:1646  */
+#line 2037 "grammartranslator.y" /* yacc.c:1646  */
     { (yyval.i) = (yyvsp[0].i); }
-#line 4344 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4352 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 130:
-#line 2068 "grammartranslator.y" /* yacc.c:1646  */
+#line 2039 "grammartranslator.y" /* yacc.c:1646  */
     { (yyval.i) = (yyvsp[0].i); }
-#line 4350 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4358 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 131:
-#line 2083 "grammartranslator.y" /* yacc.c:1646  */
+#line 2054 "grammartranslator.y" /* yacc.c:1646  */
     { newFile((yyvsp[0].name)); omFree((yyvsp[0].name)); }
-#line 4356 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4364 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 132:
-#line 2088 "grammartranslator.y" /* yacc.c:1646  */
+#line 2059 "grammartranslator.y" /* yacc.c:1646  */
     {
             feHelp((yyvsp[-1].name));
             omFree((ADDRESS)(yyvsp[-1].name));
           }
-#line 4365 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 133:
-#line 2093 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            feHelp(NULL);
-          }
 #line 4373 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 133:
+#line 2064 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            feHelp(NULL);
+          }
+#line 4381 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 134:
-#line 2100 "grammartranslator.y" /* yacc.c:1646  */
+#line 2071 "grammartranslator.y" /* yacc.c:1646  */
     {
             singular_example((yyvsp[-1].name));
             omFree((ADDRESS)(yyvsp[-1].name));
           }
-#line 4382 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4390 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 135:
-#line 2108 "grammartranslator.y" /* yacc.c:1646  */
+#line 2079 "grammartranslator.y" /* yacc.c:1646  */
     {
           if (basePack!=(yyvsp[0].lv).req_packhdl)
           {
@@ -4389,11 +4397,11 @@ yyreduce:
           else
             if (iiExport(&(yyvsp[0].lv),0)) YYERROR;
         }
-#line 4395 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4403 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 136:
-#line 2120 "grammartranslator.y" /* yacc.c:1646  */
+#line 2091 "grammartranslator.y" /* yacc.c:1646  */
     {
           leftv v=&(yyvsp[0].lv);
           if (v->rtyp!=IDHDL)
@@ -4410,11 +4418,11 @@ yyreduce:
             killhdl((idhdl)v->data,v->req_packhdl);
           }
         }
-#line 4416 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4424 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 137:
-#line 2137 "grammartranslator.y" /* yacc.c:1646  */
+#line 2108 "grammartranslator.y" /* yacc.c:1646  */
     {
           leftv v=&(yyvsp[0].lv);
           if (v->rtyp!=IDHDL)
@@ -4431,155 +4439,155 @@ yyreduce:
             killhdl((idhdl)v->data,v->req_packhdl);
           }
         }
-#line 4437 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 138:
-#line 2157 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
-          }
 #line 4445 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 139:
-#line 2161 "grammartranslator.y" /* yacc.c:1646  */
+  case 138:
+#line 2128 "grammartranslator.y" /* yacc.c:1646  */
     {
             list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
           }
 #line 4453 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 140:
-#line 2165 "grammartranslator.y" /* yacc.c:1646  */
+  case 139:
+#line 2132 "grammartranslator.y" /* yacc.c:1646  */
     {
-            if ((yyvsp[-1].i)==QRING_CMD) (yyvsp[-1].i)=RING_CMD;
             list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
           }
-#line 4462 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4461 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 141:
-#line 2170 "grammartranslator.y" /* yacc.c:1646  */
+  case 140:
+#line 2136 "grammartranslator.y" /* yacc.c:1646  */
     {
+            if ((yyvsp[-1].i)==QRING_CMD) (yyvsp[-1].i)=RING_CMD;
             list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
           }
 #line 4470 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 142:
-#line 2174 "grammartranslator.y" /* yacc.c:1646  */
+  case 141:
+#line 2141 "grammartranslator.y" /* yacc.c:1646  */
     {
-            list_cmd(RING_CMD,NULL,"// ",TRUE);
+            list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
           }
 #line 4478 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 143:
-#line 2178 "grammartranslator.y" /* yacc.c:1646  */
+  case 142:
+#line 2145 "grammartranslator.y" /* yacc.c:1646  */
     {
-            list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
-           }
+            list_cmd(RING_CMD,NULL,"// ",TRUE);
+          }
 #line 4486 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
-  case 144:
-#line 2182 "grammartranslator.y" /* yacc.c:1646  */
+  case 143:
+#line 2149 "grammartranslator.y" /* yacc.c:1646  */
     {
-            list_cmd(PROC_CMD,NULL,"// ",TRUE);
-          }
+            list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
+           }
 #line 4494 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 144:
+#line 2153 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            list_cmd(PROC_CMD,NULL,"// ",TRUE);
+          }
+#line 4502 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 145:
-#line 2186 "grammartranslator.y" /* yacc.c:1646  */
+#line 2157 "grammartranslator.y" /* yacc.c:1646  */
     {
             list_cmd(0,(yyvsp[-1].lv).Fullname(),"// ",TRUE);
             (yyvsp[-1].lv).CleanUp();
           }
-#line 4503 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4511 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 146:
-#line 2191 "grammartranslator.y" /* yacc.c:1646  */
+#line 2162 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
           }
-#line 4513 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4521 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 147:
-#line 2197 "grammartranslator.y" /* yacc.c:1646  */
+#line 2168 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
           }
-#line 4523 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4531 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 148:
-#line 2203 "grammartranslator.y" /* yacc.c:1646  */
+#line 2174 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
           }
-#line 4533 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4541 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 149:
-#line 2209 "grammartranslator.y" /* yacc.c:1646  */
+#line 2180 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
           }
-#line 4543 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4551 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 150:
-#line 2215 "grammartranslator.y" /* yacc.c:1646  */
+#line 2186 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
           }
-#line 4553 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4561 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 151:
-#line 2221 "grammartranslator.y" /* yacc.c:1646  */
+#line 2192 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
           }
-#line 4563 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4571 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 152:
-#line 2227 "grammartranslator.y" /* yacc.c:1646  */
+#line 2198 "grammartranslator.y" /* yacc.c:1646  */
     {
             if((yyvsp[-3].lv).Typ() == PACKAGE_CMD)
               list_cmd((yyvsp[-1].i),NULL,"// ",TRUE);
             (yyvsp[-3].lv).CleanUp();
-          }
-#line 4573 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 153:
-#line 2239 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            list_cmd(-1,NULL,"// ",TRUE);
           }
 #line 4581 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 153:
+#line 2210 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            list_cmd(-1,NULL,"// ",TRUE);
+          }
+#line 4589 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 154:
-#line 2245 "grammartranslator.y" /* yacc.c:1646  */
+#line 2216 "grammartranslator.y" /* yacc.c:1646  */
     { 
        yyInRingConstruction = TRUE; 
 #ifdef JL_TRANSLATOR_GRAMMAR
@@ -4590,11 +4598,11 @@ yyreduce:
 #endif
 #endif
        }
-#line 4596 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4604 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 155:
-#line 2263 "grammartranslator.y" /* yacc.c:1646  */
+#line 2234 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             /*construct strings before args are cleaned*/
@@ -4668,11 +4676,11 @@ yyreduce:
               rSetHdl(newRingHdl);
             }
           }
-#line 4674 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4682 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 156:
-#line 2337 "grammartranslator.y" /* yacc.c:1646  */
+#line 2308 "grammartranslator.y" /* yacc.c:1646  */
     {
             const char *ring_name = (yyvsp[0].lv).name;
             if (!inerror) rDefault(ring_name);
@@ -4686,11 +4694,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4692 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4700 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 157:
-#line 2351 "grammartranslator.y" /* yacc.c:1646  */
+#line 2322 "grammartranslator.y" /* yacc.c:1646  */
     {
             yyInRingConstruction = FALSE;
             if (iiAssignCR(&(yyvsp[-2].lv),&(yyvsp[0].lv))) YYERROR;
@@ -4702,11 +4710,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4708 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4716 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 158:
-#line 2363 "grammartranslator.y" /* yacc.c:1646  */
+#line 2334 "grammartranslator.y" /* yacc.c:1646  */
     {
           yyInRingConstruction = FALSE;
           sleftv tmp;
@@ -4723,19 +4731,19 @@ yyreduce:
 #endif
 #endif
         }
-#line 4729 "grammartranslator.cc" /* yacc.c:1646  */
-    break;
-
-  case 159:
-#line 2383 "grammartranslator.y" /* yacc.c:1646  */
-    {
-            if (((yyvsp[-1].i)!=LIB_CMD)||(jjLOAD((yyvsp[0].name),TRUE))) YYERROR;
-          }
 #line 4737 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
+  case 159:
+#line 2354 "grammartranslator.y" /* yacc.c:1646  */
+    {
+            if (((yyvsp[-1].i)!=LIB_CMD)||(jjLOAD((yyvsp[0].name),TRUE))) YYERROR;
+          }
+#line 4745 "grammartranslator.cc" /* yacc.c:1646  */
+    break;
+
   case 162:
-#line 2392 "grammartranslator.y" /* yacc.c:1646  */
+#line 2363 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (((yyvsp[-1].i)==KEEPRING_CMD) && (myynest==0))
                MYYERROR("only inside a proc allowed");
@@ -4800,11 +4808,11 @@ yyreduce:
               YYERROR;
             }
           }
-#line 4806 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4814 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 163:
-#line 2460 "grammartranslator.y" /* yacc.c:1646  */
+#line 2431 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -4816,11 +4824,11 @@ yyreduce:
             type_cmd(&((yyvsp[0].lv)));
 #endif
           }
-#line 4822 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4830 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 164:
-#line 2472 "grammartranslator.y" /* yacc.c:1646  */
+#line 2443 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -4851,11 +4859,11 @@ yyreduce:
             if (errorreported) YYERROR;
 #endif
           }
-#line 4857 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4865 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 165:
-#line 2509 "grammartranslator.y" /* yacc.c:1646  */
+#line 2480 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
 /*             printf("waitingForEnd: %d\n", currentVoice->waitingForEnd); */
@@ -4888,11 +4896,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4894 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4902 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 166:
-#line 2542 "grammartranslator.y" /* yacc.c:1646  */
+#line 2513 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             char * iftrueblock  = (char *) omAlloc (strlen((yyvsp[-2].name))+strlen((yyvsp[0].name))+50);
@@ -4923,11 +4931,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4929 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4937 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 167:
-#line 2573 "grammartranslator.y" /* yacc.c:1646  */
+#line 2544 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             char * elseblock  = (char *) omAlloc (strlen((yyvsp[0].name))+50);
@@ -4960,11 +4968,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 4966 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4974 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 168:
-#line 2606 "grammartranslator.y" /* yacc.c:1646  */
+#line 2577 "grammartranslator.y" /* yacc.c:1646  */
     {
             int i; TESTSETINT((yyvsp[-2].lv),i);
             if (i)
@@ -4973,29 +4981,29 @@ yyreduce:
             }
             currentVoice->ifsw=0;
           }
-#line 4979 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4987 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 169:
-#line 2615 "grammartranslator.y" /* yacc.c:1646  */
+#line 2586 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (exitBuffer(BT_break)) YYERROR;
             currentVoice->ifsw=0;
           }
-#line 4988 "grammartranslator.cc" /* yacc.c:1646  */
+#line 4996 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 170:
-#line 2620 "grammartranslator.y" /* yacc.c:1646  */
+#line 2591 "grammartranslator.y" /* yacc.c:1646  */
     {
             if (contBuffer(BT_break)) YYERROR;
             currentVoice->ifsw=0;
           }
-#line 4997 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5005 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 171:
-#line 2662 "grammartranslator.y" /* yacc.c:1646  */
+#line 2599 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             
@@ -5022,11 +5030,11 @@ yyreduce:
 #endif
 #endif            
           }
-#line 5028 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5036 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 172:
-#line 2692 "grammartranslator.y" /* yacc.c:1646  */
+#line 2629 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             /* rewrite it as a while loop */
@@ -5069,11 +5077,11 @@ yyreduce:
 #endif
 #endif            
           }
-#line 5075 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5083 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 173:
-#line 2738 "grammartranslator.y" /* yacc.c:1646  */
+#line 2675 "grammartranslator.y" /* yacc.c:1646  */
     {
             idhdl h = enterid((yyvsp[-1].name),myynest,PROC_CMD,&IDROOT,TRUE);
             if (h==NULL) {omFree((ADDRESS)(yyvsp[-1].name));omFree((ADDRESS)(yyvsp[0].name)); YYERROR;}
@@ -5090,11 +5098,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 5096 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5104 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 174:
-#line 2755 "grammartranslator.y" /* yacc.c:1646  */
+#line 2692 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
 /*             printf(" $1: %s, $2: %s, $3: %s \n", $1, $2, $3); */
@@ -5147,11 +5155,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 5153 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5161 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 175:
-#line 2808 "grammartranslator.y" /* yacc.c:1646  */
+#line 2745 "grammartranslator.y" /* yacc.c:1646  */
     {
             omFree((ADDRESS)(yyvsp[-1].name));
             idhdl h = enterid((yyvsp[-3].name),myynest,PROC_CMD,&IDROOT,TRUE);
@@ -5178,16 +5186,16 @@ yyreduce:
 #endif
 #endif
           }
-#line 5184 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5192 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 176:
-#line 2838 "grammartranslator.y" /* yacc.c:1646  */
+#line 2775 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
             if ((yyvsp[0].lv).Typ() == INT_CMD){
-                (yyvsp[0].lv).ms = mstring_concat( (yyvsp[0].lv).ms, mstring_init_string("::Int") );
+                (yyvsp[0].lv).ms = mstring_concat( (yyvsp[0].lv).ms, mstring_init_string("::Int32") );
             }
             else if ((yyvsp[0].lv).Typ() == BIGINT_CMD) {
                 (yyvsp[0].lv).ms = mstring_concat( (yyvsp[0].lv).ms, mstring_init_string("::BigInt") );
@@ -5205,11 +5213,11 @@ yyreduce:
             else                { if (iiAlias(&(yyvsp[0].lv))) YYERROR; }
 #endif
           }
-#line 5211 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5219 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 177:
-#line 2861 "grammartranslator.y" /* yacc.c:1646  */
+#line 2798 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -5228,11 +5236,11 @@ yyreduce:
 #endif
 #endif
           }
-#line 5234 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5242 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 178:
-#line 2880 "grammartranslator.y" /* yacc.c:1646  */
+#line 2817 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -5248,11 +5256,11 @@ yyreduce:
             || (iiParameter(&tmp_expr)))
               YYERROR;
           }
-#line 5254 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5262 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 179:
-#line 2899 "grammartranslator.y" /* yacc.c:1646  */
+#line 2836 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -5272,11 +5280,11 @@ yyreduce:
 //             if (exitBuffer(BT_proc)) YYERROR;
 #endif
           }
-#line 5278 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5286 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 180:
-#line 2919 "grammartranslator.y" /* yacc.c:1646  */
+#line 2856 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             translator_NbRuleTraversed++;
@@ -5294,11 +5302,11 @@ yyreduce:
             }
 #endif
           }
-#line 5300 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5308 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 181:
-#line 2939 "grammartranslator.y" /* yacc.c:1646  */
+#line 2876 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             (yyval.lv) = (yyvsp[0].lv);
@@ -5309,11 +5317,11 @@ yyreduce:
 #endif
 #endif
         }
-#line 5315 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5323 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
   case 182:
-#line 2949 "grammartranslator.y" /* yacc.c:1646  */
+#line 2886 "grammartranslator.y" /* yacc.c:1646  */
     {
 #ifdef JL_TRANSLATOR_GRAMMAR
             /*leftv v = &$1;
@@ -5332,11 +5340,11 @@ yyreduce:
 #endif
 #endif
             }
-#line 5338 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5346 "grammartranslator.cc" /* yacc.c:1646  */
     break;
 
 
-#line 5342 "grammartranslator.cc" /* yacc.c:1646  */
+#line 5350 "grammartranslator.cc" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

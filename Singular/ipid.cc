@@ -44,6 +44,8 @@
 #include "polys/mod_raw.h"
 #endif /* HAVE_DYNAMIC_LOADING */
 
+#define JL_TRANSLATOR_IPID
+
 omBin sip_command_bin = omGetSpecBin(sizeof(sip_command));
 omBin sip_package_bin = omGetSpecBin(sizeof(sip_package));
 //omBin ip_package_bin = omGetSpecBin(sizeof(ip_package));
@@ -285,8 +287,10 @@ idhdl enterid(const char * s, int lev, int t, idhdl* root, BOOLEAN init, BOOLEAN
         }
         else
         {
+#ifndef JL_TRANSLATOR_IPID
           if (BVERBOSE(V_REDEFINE))
             Warn("redefining %s (%s)",s,my_yylinebuf);
+#endif
           if (s==IDID(h)) IDID(h)=NULL;
           killhdl2(h,root,currRing);
         }
@@ -304,8 +308,10 @@ idhdl enterid(const char * s, int lev, int t, idhdl* root, BOOLEAN init, BOOLEAN
       {
         if ((IDTYP(h) == t)||(t==DEF_CMD))
         {
+#ifndef JL_TRANSLATOR_IPID
           if (BVERBOSE(V_REDEFINE))
             Warn("redefining %s (%s)",s,my_yylinebuf);
+#endif
           if (s==IDID(h)) IDID(h)=NULL;
           killhdl2(h,&currRing->idroot,currRing);
         }
@@ -323,8 +329,10 @@ idhdl enterid(const char * s, int lev, int t, idhdl* root, BOOLEAN init, BOOLEAN
       {
         if ((IDTYP(h) == t)||(t==DEF_CMD))
         {
+#ifndef JL_TRANSLATOR_IPID
           if (BVERBOSE(V_REDEFINE))
             Warn("redefining %s (%s)",s,my_yylinebuf);
+#endif
           if (s==IDID(h)) IDID(h)=NULL;
           killhdl2(h,&IDROOT,NULL);
         }
