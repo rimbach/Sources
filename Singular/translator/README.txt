@@ -16,6 +16,17 @@ The obtained julia commands can be interpreted by the julia
 interpreter and the Singular.jl library + some add-ons
 that are in the file Singular/translator/mySingular.jl.
 
+Below is a short overview of what has been done. 
+a/ definition and arithmetic of int and bigint objects: PARTIALY DONE: &, NOTEQUAL (<>), DOTDOT (..), :, NOT (!) are not handled yet.
+b/ definition and call of procedures:                   PARTIALY DONE: the rule proccmd: PROC_CMD extendedid BLOCKTOK is not handled
+c/ flow controls 1: while and for loops:                DONE
+d/ flow controls 2: if - else -end :                    PROBLEMATIC  
+e/ rings declaration:                                   PARTIALY DONE: partial support of fields, variables and ordering
+f/ number over fields and polynomials:                  DONE
+g/ ideals and standard basis :                          DONE
+h/ everything else:                                     TODO
+Details are given in 3/ of this document
+
 0/ Installation / Compilation / Exemples
 ========================================
 
@@ -93,8 +104,11 @@ JULIA COMMAND  STDIN (0) 0> i = idealFromArray([(p_mInit(pointer(Vector{UInt8}("
 JULIA COMMAND  STDIN (0) 0> si = m_id_Std(i, _singular_actual_ring) 
 JULIA COMMAND  STDIN (0) 0> id_String(si,"si",_singular_actual_ring) 
 
-copy/paste one by one the julia commands
-at the end and obtain:
+Include Singular/translator/mySingular.jl:
+julia> include("mySingular.jl")
+
+then copy/paste one by one the julia commands
+and finally obtain:
 
 julia> id_String(si,"si",_singular_actual_ring)
 si[1]=x+y
@@ -278,16 +292,132 @@ and
 forcmd: FOR_CMD STRINGTOK STRINGTOK STRINGTOK BLOCKTOK
 for details.
 
-d/ flow controls 2: if - then - else -end : TODO
--------------------------------------------
+d/ flow controls 2: if - else -end : PROBLEMATIC
+------------------------------------
+This flow control is problematic because of the "end"
+keyword that is required in julia but not in Singular:
+in the Singular interpreter, an "if" statement is
+interpreted regardless of the existence of a pending 
+"else" statement.
 
-e/ rings and numbers over fields and polynomials:
--------------------------------------------------
+For now, if one type:
+? if (1==1) {1+1;} else { 1-1;}
+the answer is:
+JULIA COMMAND  FUNCT (0) 1> if ( (1 == 1) ) 
+JULIA COMMAND  FUNCT (0) 1>    (1 + 1) 
+JULIA COMMAND  FUNCT (0) 2>    else  
+JULIA COMMAND  FUNCT (0) 2>       (1 - 1) 
+JULIA COMMAND  FUNCT (0) 1>    end 
+JULIA COMMAND  STDIN (0) 0> end
+and it is fine.
+But if one type:
+? if (1==1) {1+1;};
+the answer is
+JULIA COMMAND  FUNCT (0) 1> if ( (1 == 1) ) 
+JULIA COMMAND  FUNCT (0) 1>   
+JULIA COMMAND  FUNCT (0) 1>    (1 + 1) 
+JULIA COMMAND  STDIN (0) 0> end
+and 
+? else { 1-1;}
+gives
+JULIA COMMAND  FUNCT (0) 1> else  
+JULIA COMMAND  FUNCT (0) 1>    (1 - 1) 
+JULIA COMMAND  STDIN (0) 0> end
 
-f/ ideals:
-----------
+If the translator is used to translate a file,
+one can make a pass on the obtained file 
+to remove the "end" after the if statement...
 
-g/ everything else: TODO
+e/ rings declaration: PARTIALY DONE
+---------------------
+Simple ring declaration commands like: 
+ring r = field, vars, ordering
+are handled by the translator.
+
+It requires the ability of translating: 
+- a field, this is done only for several fields in the function 
+mstring_toJulia_coeffs in Singular/translator/toJulia.cc
+- a list of variables, this is done in the function 
+mstring_toJulia_vars in Singular/translator/toJulia.cc
+- an ordering, this is done in the function 
+mstring_toJulia_ordering in Singular/translator/toJulia.cc
+
+The fields that are handled are real and complex floating points 
+(i.e. real, (real, mantissa), complex, (complex, mantissa), (complex, mantissa, sqrtminus1))
+and integers fields (i.e. Z/pZ, declared with an integer) and Q (declared with 0).
+
+The list of variables that are handled are of the type (x,y,...):
+indexed variables (e.g. (x(1..10))) are not supported. 
+
+The ordering that are handled are
+-simple orderings i.e. dp, lp, ...
+- list of simple orderings i.e. (dp,lp)
+
+Interpreting obtained julia commands require to include 
+Singular/translator/mySingular.jl
+that imports types from libSingular.jl of Singular.jl
+It also uses a global variable _singular_actual_ring
+that is set to the actual singular ring by the julia command.
+
+f/ number over fields and polynomials: DONE
+-------------------------------------
+Polynomial definition is tricky because of the Singular syntax for monomials:
+2x2 in singular means 2*x^2.
+For handling this kind of syntax in the translator, I did the following.
+
+For the declaration of a poly or a number, the translator 
+enters in a special mode "ring_decl".
+When the translator is in this mode, 
+each non declared symbol 
+(e.g x, or 2x2 or xy ...) 
+is translated into the julia command:
+p_mInit(pointer(Vector{UInt8}("2x2")), _singular_actual_ring)
+The function p_mInit(...,...) calls a singular function
+that constructs a monomial on a ring from a string.
+
+The mode ring_decl is handled by the attribute ring_decl of the class Voice
+defined in Singular/devoices.h.
+Then it suffices to set currentVoice->ring_decl to 1 when one of the keywords
+"poly" or "number" is encountered
+(see the rule declare_ip_variable: ... | RING_DECL elemexpr)
+and to set it to 0 at the assignment 
+(see the rule assign: left_value exprlist).
+
+Testing if a symbol has already been declared
+is done by consulting a table of symbols that is 
+independant from the one of the original interpreter.
+This table of symbols is implemented in 
+Singular/translator/msymtable.h and Singular/translator/msymtable.cc
+as a linked list of strings.
+The table of symbols is the attribute table_of_symbols of the class voice
+and the table of symbols of the current scope can be accessed with
+currentVoice->table_of_symbols.
+
+The functions for adding a symbol to the table 
+of symbols of the actual scope are
+void add_symbol_in_table_of_symbol_string(const char * name)
+and 
+void add_symbol_in_table_of_symbol_mstring(mstring ms)
+
+The function for checking in the table of symbols of all scopes
+is
+int is_symbol_in_table_of_symbol(const char * name)
+
+These functions are defined in Singular/grammartranslator.y
+
+g/ ideals and standard basis :
+------------------------------
+The definintion of an ideal boils down to the 
+construction of a list of polynomials.
+Then the function idealFromArray defined in mySingular.jl
+does the work.
+
+The translation of std (the singular command for the standard basis)
+is done in the rule
+elemexpr: ... | CMD_M '(' exprlist ')'.
+
+
+h/ everything else: TODO
 ------------------------
 
 ANNEXE A: co-existence of two grammar files

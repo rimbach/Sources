@@ -14,7 +14,6 @@ mstring mstring_toJulia_coeffs ( leftv coeffs ) {
         res = mstring_init_string("Typ: CRING_CMD. Sorry but not yet implemented");
     }
     else if (coeffs->Typ()==INT_CMD){
-        res = mstring_init_string("Typ: INT_CMD. Sorry but not yet implemented");
         
         int ch = (int)(long)coeffs->Data();
         leftv pnn=coeffs;

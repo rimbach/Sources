@@ -1202,9 +1202,26 @@ elemexpr:
           {
 #ifdef JL_TRANSLATOR_GRAMMAR
             int b;
+            leftv voyager;
             switch($1){
                 case STD_CMD:
-                    $$.ms = ms_conc_s_ms_s("m_id_Std(", $3.ms, ", _singular_actual_ring)");
+/*                     printf("POLY_CMD: %d, IDEAL_CMD: %d, $3.Typ(): %d\n", POLY_CMD, IDEAL_CMD, $3.Typ()); */
+                    if ($3.Typ() == IDEAL_CMD)
+                        $$.ms = ms_conc_s_ms_s("m_id_Std(", $3.ms, ", _singular_actual_ring)");
+                    else if ($3.Typ() == POLY_CMD) {
+                        /*construct an ideal from the list of polys...*/
+                        
+                        $$.ms = $3.ms;
+                        voyager = &$3;
+                        while (voyager->next!=NULL){
+                            $$.ms = ms_conc_ms_s_ms( $$.ms, ", ", voyager->next->ms);
+                            voyager = voyager->next;
+                        }
+                        $$.ms = ms_conc_s_ms_s("[", $$.ms, "]");
+                        $$.ms = ms_conc_s_ms_s( "idealFromArray(", $$.ms, ")" );
+                        $$.ms = ms_conc_s_ms_s("m_id_Std(", $$.ms, ", _singular_actual_ring)");
+                        
+                    }
                     break;
                 default:
 /*                     $$.ms = ms_conc_s_ms_s("TODO(", $3.ms, ")"); */
@@ -2514,7 +2531,7 @@ ifcmd: IF_CMD '(' expr ')' BLOCKTOK
 #ifdef JL_TRANSLATOR_GRAMMAR
             char * iftrueblock  = (char *) omAlloc (strlen($5)+strlen($7)+50);
             sprintf(iftrueblock, "%s\n else {\n%s} \njulia_endproc\n", $5, $7 );
-            printf("%s\n", iftrueblock);
+/*             printf("%s\n", iftrueblock); */
             omFree((ADDRESS)$5);
             omFree((ADDRESS)$7);
 #else
@@ -2544,8 +2561,8 @@ ifcmd: IF_CMD '(' expr ')' BLOCKTOK
           {
 #ifdef JL_TRANSLATOR_GRAMMAR
             char * elseblock  = (char *) omAlloc (strlen($2)+50);
-/*             sprintf(elseblock, "%s\njulia_endproc\n", $2); */
-            sprintf(elseblock, "%s", $2);
+            sprintf(elseblock, "%s\njulia_endproc\n", $2);
+/*             sprintf(elseblock, "%s", $2); */
             omFree((ADDRESS)$2);
 #else
             if (currentVoice->ifsw==1)
